@@ -1,0 +1,10 @@
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+spring:
+  datasource:
+    initialization-mode: always
+    schema: "schema.sql"
+    url: "jdbc:oracle:thin:@localhost:49161:xe"
+    username: "system"
+    password: "oracle"
