@@ -5,6 +5,8 @@ spring:
   datasource:
     initialization-mode: always
     schema: "schema.sql"
-    url: "jdbc:oracle:thin:@localhost:49161:xe"
+    url: ""
     username: "system"
     password: "oracle"
+    hikari:
+      auto-commit: true
