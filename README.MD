@@ -9,7 +9,8 @@
 Команда `./gradlew test` запустит тесты
 
 # Запрос из первого задания
-`select dep.DEPART_NAME,
+```
+select dep.DEPART_NAME,
         coalesce(da.ADD_VALUE, (select tmp.ADD_VALUE
                                 from (select d.*, h.PARENT_ID, da.ADD_VALUE
                                       from DEPART d
@@ -24,4 +25,5 @@
  from DEPART dep
           left join (select * from DEPART_ADD da where ADD_TYPE = 'CFO') da
                     on da.DEPART_ID = dep.DEPART_ID
- order by dep.DEPART_ID;`
+ order by dep.DEPART_ID;
+ ```
